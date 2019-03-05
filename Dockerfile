@@ -1,4 +1,5 @@
 FROM openjdk:8
-COPY ./target/classes/ /usr/bin
-WORKDIR /usr/bin
+RUN MKDIR /tmp
+COPY ./target/classes/ /tmp
+WORKDIR /tmp
 ENTRYPOINT ["java", "Main"]
